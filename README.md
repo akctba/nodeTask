@@ -2,6 +2,7 @@
 Nodejs with 
  - express
  - EJS
+ - Consign
  - MySQL
 
 Other components used:
