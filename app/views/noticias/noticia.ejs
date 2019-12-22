@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Portal de notícias</title>
-		</head>
-	<body>
+<html lang="e">
 
-		<h1>Notícia</h1>
+<head>
+	<meta charset="utf-8" />
+	<title>Noticias</title>
+</head>
 
-	</body>
+<body>
+
+	<h1>Detalhe da noticia</h1>
+
+	<table>
+		<tr>
+			<th>Id</th>
+			<th>Titulo</th>
+			<th>Noticia</th>
+			<th>Criacao</th>
+		</tr>
+		<tr>
+			<td><%= selectedNoticia[0].id_noticia %></td>
+			<td><%= selectedNoticia[0].titulo %></td>
+			<td><%= selectedNoticia[0].noticia %></td>
+			<td><%= selectedNoticia[0].data_criacao %></td>
+		</tr>
+	</table>
+
+</body>
+
 </html>

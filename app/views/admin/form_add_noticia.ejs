@@ -4,11 +4,34 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Formulario de cadastro de Noticia</title>
+
+	<style>
+		.formNoticia {
+			width: 400px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 400px;
+			row-gap: 6px;
+			padding: 10px;
+		}
+	</style>
+
 </head>
 
 <body>
 
 	<h1>Adicionar noticia</h1>
+	<br>
+
+	<form action="/noticias/salvar" method="POST">
+		<div class="formNoticia">
+			<label for="titulo">Titulo</label>
+			<input type="text" id="titulo" name="titulo" placeholder="Titulo da noticia" />
+			<label for="noticia">Noticia</label>
+			<textarea name="noticia" id="noticia" cols="30" rows="10"></textarea>
+			<input type="submit" value="Enviar">
+		</div>
+	</form>
 
 </body>
 
