@@ -1,6 +1,7 @@
 # nodeTask
 Nodejs with 
  - express
+    - body-parser
  - EJS
  - Consign
  - MySQL
