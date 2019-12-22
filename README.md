@@ -1,2 +1,11 @@
 # nodeTask
-Nodejs with express and MySQL
+Nodejs with 
+ - express
+ - EJS
+ - MySQL
+
+Other components used:
+ - Nodemon
+ - npm
+ - VS Code
+ 
