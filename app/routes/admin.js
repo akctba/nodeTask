@@ -1,12 +1,18 @@
-module.exports = function(app) {
-    app.get('/add_noticia', function (req, res) {
+module.exports = function(application) {
+    application.get('/add_noticia', function (req, res) {
         res.render("admin/form_add_noticia");
     });
 
-    app.post('/noticias/salvar', function (req, res) {
-        var noticias = req.body;
+    application.post('/noticias/salvar', function (req, res) {
+        var noticia = req.body;
+        //res.send(noticias);
 
+        var connection = application.config.dbConnection();
+        var noticiasModel = application.app.models.noticiasModel;
 
-        res.send(noticias);
+        noticiasModel.saveNoticias(noticia, connection, function (error, result) {
+            //res.render("noticias/noticias", {noticias: result});
+            res.redirect('/news');
+        });
     });
 }

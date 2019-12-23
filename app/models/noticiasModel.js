@@ -8,5 +8,9 @@ module.exports = function(){
         connection.query('select * from noticias where id_noticia = 2', callback);
     }
 
+    this.saveNoticias = function(noticia, connection, calback) {
+        connection.query('insert into noticias set ? ',noticia, calback);
+    }
+
     return this;
 }
