@@ -8,9 +8,9 @@ module.exports = function(application) {
         //res.send(noticias);
 
         var connection = application.config.dbConnection();
-        var noticiasModel = new application.app.models.noticiasModel(connection);
+        var NoticiasDAO = new application.app.models.NoticiasDAO(connection);
 
-        noticiasModel.saveNoticias(noticia, function (error, result) {
+        NoticiasDAO.saveNoticias(noticia, function (error, result) {
             //res.render("noticias/noticias", {noticias: result});
             res.redirect('/news');
         });
