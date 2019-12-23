@@ -2,6 +2,7 @@
 Nodejs with 
  - express
     - body-parser
+    - Express-validator
  - EJS
  - Consign
  - MySQL
