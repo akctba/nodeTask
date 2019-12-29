@@ -23,12 +23,34 @@
 	<h1>Adicionar noticia</h1>
 	<br>
 
+	<%# validation messages from express-validator %>
+	<% if (typeof invalid !== 'undefined') { %>
+	<ul>
+		<% for(var i = 0; i < invalid.length; i++) { %>
+		<li><%=invalid[i].msg %></li>
+		<% }%>
+	</ul>
+
+	<% } %>
+
 	<form action="/noticias/salvar" method="POST">
 		<div class="formNoticia">
 			<label for="titulo">Titulo</label>
-			<input type="text" id="titulo" name="titulo" placeholder="Titulo da noticia" />
+			<input type="text" id="titulo" name="titulo" placeholder="Titulo da noticia" value="<%=noticia.titulo %>" />
+
+			<label for="resumo">Resumo</label>
+			<input type="text" id="resumo" name="resumo" placeholder="Resumo na noticia" value="<%=noticia.resumo %>">
+
+			<label for="autor">Autor da noticia</label>
+			<input type="text" id="autor" name="autor" placeholder="Autor na noticia" value="<%=noticia.autor %>">
+
+			<label for="data_noticia">Data do fato</label>
+			<input type="date" id="data_noticia" name="data_noticia" placeholder="data da noticia"
+				value="<%=noticia.data_noticia %>">
+
 			<label for="noticia">Noticia</label>
-			<textarea name="noticia" id="noticia" cols="30" rows="10"></textarea>
+			<textarea name="texto_noticia" id="texto_noticia" cols="30" rows="10" value="<%=noticia.texto_noticia %>"></textarea>
+
 			<input type="submit" value="Enviar">
 		</div>
 	</form>
