@@ -8,6 +8,7 @@ app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
 //body-parser (middleware)
+app.use(express.static('./app/public')); //asset files
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(expressValidator());
 
