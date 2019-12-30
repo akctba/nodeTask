@@ -24,7 +24,7 @@ module.exports.noticias_salvar = function (application, req, res) {
     if (error) {
         res.render("admin/form_add_noticia", {
             invalid: error,
-            noticia: newNoticia
+            newNoticia: newNoticia
         });
         return;
     }

@@ -63,27 +63,27 @@
 	    			<form action="/noticias/salvar" method="POST">
 						<div class="form-group">
 							<label for="titulo">Título:</label>
-							<input type="text" class="form-control" id="titulo" name="titulo">
+							<input type="text" class="form-control" id="titulo" name="titulo" value="<%=newNoticia.titulo%>">
 						</div>
 
 						<div class="form-group">
 							<label for="pwd">Resumo:</label>
-							<input type="text" class="form-control" id="resumo" name="resumo">
+							<input type="text" class="form-control" id="resumo" name="resumo" value="<%=newNoticia.resumo%>">
 						</div>
 						
 						<div class="form-group">
 							<label for="pwd">Autor:</label>
-							<input type="text" class="form-control" id="autor" name="autor">
+							<input type="text" class="form-control" id="autor" name="autor" value="<%=newNoticia.autor%>">
 						</div>
 
 						<div class="form-group">
 							<label for="pwd">Data:</label>
-							<input type="date" class="form-control" id="data_noticia" name="data_noticia">
+							<input type="date" class="form-control" id="data_noticia" name="data_noticia" value="<%=newNoticia.data_noticia%>">
 						</div>
 
 						<div class="form-group">
 							<label for="pwd">Notícia:</label>
-							<textarea class="form-control" id="texto_noticia" name="texto_noticia"></textarea>
+							<textarea class="form-control" id="texto_noticia" name="texto_noticia" rows="20"><%=newNoticia.texto_noticia%></textarea>
 						</div>
 
 
