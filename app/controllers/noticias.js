@@ -15,7 +15,7 @@ module.exports.noticia = function (application, req, res) {
 
     noticiasDAO.getNoticia(function (error, result) {
         res.render("noticias/noticia", {
-            selectedNoticia: result
+            noticia: result
         });
     });
 }
