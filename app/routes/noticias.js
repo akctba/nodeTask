@@ -18,7 +18,7 @@ module.exports = function (application) {
         var noticiasDAO = new application.app.models.NoticiasDAO(connection);
 
         noticiasDAO.getNoticia(function (error, result) {
-            res.render("noticias/noticia", {noticias: result});
+            res.render("noticias/noticia", {selectedNoticia: result});
         });
     });
 }
